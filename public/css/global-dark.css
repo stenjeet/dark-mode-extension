@@ -1,0 +1,110 @@
+:root {
+	--dt-bg: #171a1f;
+	--dt-bg-elevated: #1f2430;
+	--dt-text: #e6e9ef;
+	--dt-text-muted: #b3b9c5;
+	--dt-border: #343b48;
+	--dt-link: #8ab4ff;
+	--dt-link-hover: #a9c8ff;
+}
+
+html,
+body {
+	background-color: var(--dt-bg) !important;
+	color: var(--dt-text) !important;
+	color-scheme: dark !important;
+}
+
+body,
+div,
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+ul,
+ol,
+li,
+fieldset,
+legend {
+	background-color: transparent !important;
+	color: var(--dt-text) !important;
+	border-color: var(--dt-border) !important;
+}
+
+p,
+span,
+label,
+small,
+strong,
+em,
+blockquote,
+code,
+pre,
+th,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--dt-text) !important;
+}
+
+a {
+	color: var(--dt-link) !important;
+}
+
+a:hover,
+a:focus-visible {
+	color: var(--dt-link-hover) !important;
+}
+
+input,
+textarea,
+select,
+button {
+	background-color: var(--dt-bg-elevated) !important;
+	color: var(--dt-text) !important;
+	border: 1px solid var(--dt-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--dt-text-muted) !important;
+}
+
+hr,
+table,
+tr,
+td,
+th {
+	border-color: var(--dt-border) !important;
+}
+
+img,
+video,
+picture,
+canvas,
+svg,
+iframe {
+	background-color: transparent !important;
+	filter: none !important;
+}
+
+[class*="bg-white"],
+[class*="bg-light"],
+[class*="text-black"],
+[class*="text-dark"] {
+	background-color: var(--dt-bg-elevated) !important;
+	color: var(--dt-text) !important;
+}
+
+html[data-theme="dark"],
+html[data-color-mode="dark"],
+html[class*="dark"] {
+	color-scheme: dark !important;
+}

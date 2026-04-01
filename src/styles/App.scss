@@ -1,0 +1,48 @@
+@use "./reset";
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
+#root {
+	min-width: 300px;
+	min-height: 400px;
+	background: #000;
+	color: #fff;
+	font-family: "Arimo", sans-serif;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 16px;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.extensionMode {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.extensionMode__title {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.siteSetting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 6px;
+	background: #464646;
+	border-radius: 6px;
+}

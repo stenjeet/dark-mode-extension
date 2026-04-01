@@ -1,0 +1,14 @@
+.siteList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	height: 240px;
+	padding: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.siteList::-webkit-scrollbar {
+	display: none;
+}
