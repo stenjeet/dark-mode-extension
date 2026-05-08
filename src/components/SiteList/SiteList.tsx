@@ -96,7 +96,7 @@ function SiteList() {
       </div>
       <div className={styles.siteList}>
         {sites.length === 0 ? (
-          <p className={styles.emptyState}>Нет сайтов в списке</p>
+          <p className={styles.emptyState}>No sites listed</p>
         ) : (
           sites.map((site) => (
             <SiteItem key={site} site={site} remove={removeSite} />
