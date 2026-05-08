@@ -1,11 +1,20 @@
 :global(.ant-segmented).siteToggle {
-	--ant-segmented-bg: #000000;
-	--ant-segmented-item-color: #ffffff;
-	--ant-segmented-item-hover-color: #ffffff;
+	--ant-segmented-bg: #000;
+	--ant-segmented-item-color: #fff;
+	--ant-segmented-item-hover-color: #fff;
 	--ant-segmented-item-hover-bg: transparent;
-	--ant-segmented-item-selected-bg: #5c8dc5;
-	--ant-segmented-item-selected-color: #ffffff;
+	--ant-segmented-item-selected-bg: var(--gradient-brand);
+	--ant-segmented-item-selected-color: #fff;
 
-	background: #000000;
-	color: #ffffff;
+	background: #000;
+	color: #fff;
+	padding: 2px;
+	border-radius: 8px;
+}
+
+:global(.ant-segmented).siteToggle :global(.ant-segmented-item) {
+	min-height: 23px;
+	padding-inline: 9px;
+	font-size: 12px;
+	font-weight: 500;
 }

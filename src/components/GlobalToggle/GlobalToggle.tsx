@@ -41,22 +41,28 @@ function GlobalToggle() {
 	};
 
 	return (
-			<ConfigProvider
-				theme={{
-					token: {
-
-
+		<ConfigProvider
+			theme={{
+				components: {
+					Switch: {
+						trackMinWidth: 54,
+						trackHeight: 27,
+						trackPadding: 2,
+						handleSize: 22,
+						innerMinMargin: 10,
+						innerMaxMargin: 30,
 					}
-				}}
-			>
-				<Switch
-					className={styles.globalToggle}
-					checkedChildren="On"
-					unCheckedChildren="Off"
-					checked={mode === "On"}
-					onChange={handleChange}
+				}
+			}}
+		>
+			<Switch
+				className={styles.globalToggle}
+				checkedChildren="On"
+				unCheckedChildren="Off"
+				checked={mode === "On"}
+				onChange={handleChange}
 			/>
-			</ConfigProvider>
+		</ConfigProvider>
 	);
 }
 

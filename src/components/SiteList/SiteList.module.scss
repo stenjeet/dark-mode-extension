@@ -1,14 +1,93 @@
+.siteListWrapper {
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #27272a;
+	background: #18181b;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 0;
+}
+
+.addSiteTitle {
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+.addSiteControls {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.input {
+	flex: 1;
+	min-width: 0;
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-size: 16px;
+	color: #fff;
+	background: #000;
+	border: 1px solid #27272a;
+	transition: box-shadow 0.2s ease, border-color 0.2s ease;
+
+	&::placeholder {
+		color: #52525b;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: transparent;
+		box-shadow: 0 0 0 2px #6366f1;
+	}
+}
+
+.button {
+	padding: 8px 16px;
+	border: 0;
+	border-radius: 8px;
+	color: #fff;
+	background: var(--gradient-brand);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	cursor: pointer;
+	box-shadow: 0 8px 20px rgb(63 59 184 / 30%);
+	transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+	filter: brightness(1.07);
+}
+
+.button:active {
+	transform: translateY(1px);
+}
+
+.button:focus-visible {
+	outline: 2px solid var(--color-brand-start);
+	outline-offset: 2px;
+}
+
 .siteList {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
-
-	height: 240px;
-	padding: 10px;
-	overflow-y: auto;
-	overflow-x: hidden;
+	gap: 8px;
+	flex: 1;
+	min-height: 120px;
+	overflow: auto;
 }
 
 .siteList::-webkit-scrollbar {
 	display: none;
+}
+
+.emptyState {
+	margin: 0;
+	padding: 16px 0;
+	color: #52525b;
+	font-size: 14px;
+	text-align: center;
 }

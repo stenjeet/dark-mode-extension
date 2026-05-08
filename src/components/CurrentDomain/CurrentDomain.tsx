@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from './CurrentDomain.module.scss';
 
 
 function CurrentDomain() {
@@ -13,7 +14,7 @@ function CurrentDomain() {
 
 	return (  
 		<div>
-			{domain}
+			<p className={styles.domain}>{domain}</p>
 		</div>
 	);
 }

@@ -1,11 +1,13 @@
 :root {
-	--dt-bg: #171a1f;
-	--dt-bg-elevated: #1f2430;
-	--dt-text: #e6e9ef;
-	--dt-text-muted: #b3b9c5;
-	--dt-border: #343b48;
-	--dt-link: #8ab4ff;
-	--dt-link-hover: #a9c8ff;
+	--dt-bg: #0f1012;
+	--dt-bg-elevated: #17181b;
+	--dt-bg-surface: #1e2024;
+	--dt-text: #e3e1dc;
+	--dt-text-muted: #a4a19a;
+	--dt-border: #2d2f34;
+	--dt-link: #c8b38e;
+	--dt-link-hover: #dcc7a1;
+	--dt-overlay: rgba(0, 0, 0, 0.62);
 }
 
 html,
@@ -72,6 +74,14 @@ button {
 	border: 1px solid var(--dt-border) !important;
 }
 
+input:focus,
+textarea:focus,
+select:focus,
+button:focus-visible {
+	outline: 1px solid var(--dt-link) !important;
+	outline-offset: 1px !important;
+}
+
 input::placeholder,
 textarea::placeholder {
 	color: var(--dt-text-muted) !important;
@@ -101,6 +111,29 @@ iframe {
 [class*="text-dark"] {
 	background-color: var(--dt-bg-elevated) !important;
 	color: var(--dt-text) !important;
+}
+
+dialog,
+[role="dialog"],
+[aria-modal="true"],
+[class*="modal"],
+[class*="Modal"],
+[class*="popup"],
+[class*="Popup"],
+[class*="popover"],
+[class*="Popover"],
+[class*="dropdown-menu"],
+[class*="Dropdown-menu"] {
+	background-color: var(--dt-bg-surface) !important;
+	color: var(--dt-text) !important;
+	border: 1px solid var(--dt-border) !important;
+}
+
+dialog::backdrop,
+[class*="backdrop"],
+[class*="overlay"],
+[class*="Overlay"] {
+	background-color: var(--dt-overlay) !important;
 }
 
 html[data-theme="dark"],

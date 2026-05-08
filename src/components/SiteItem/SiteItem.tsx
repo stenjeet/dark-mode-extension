@@ -1,5 +1,5 @@
-import { CloseOutlined } from "@ant-design/icons";
 import styles from './SiteItem.module.scss';
+import { Trash2 } from "lucide-react";
 
 interface SiteItemProps {
 	site: string;
@@ -12,10 +12,12 @@ function SiteItem({ site, remove }: SiteItemProps) {
 			<div className={styles.site}>
 				<p>{site}</p>
 			</div>
-			<CloseOutlined
-				className={styles.removeSite}
+			<button
 				onClick={() => remove(site)}
-			/>
+				className={styles.removeButton}
+			>
+				<Trash2 className={styles.removeIcon} />
+			</button>
 		</div>
 	);
 }

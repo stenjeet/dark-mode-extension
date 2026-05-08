@@ -1,0 +1,24 @@
+.footer {
+	background: rgb(24 24 27 / 50%);
+	border-radius: 8px;
+	padding: 12px;
+	text-align: center;
+	border: 1px solid rgb(39 39 42 / 50%);
+}
+
+.message {
+	margin: 0;
+	color: #71717a;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.enabled {
+	color: #34d399;
+	font-weight: 500;
+}
+
+.disabled {
+	color: #f87171;
+	font-weight: 500;
+}

@@ -1,0 +1,33 @@
+.card {
+	background: #18181B;
+	border: 1px solid #27272a;
+	border-radius: 8px;
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0;
+}
+
+.title {
+	margin: 0;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.info > div {
+	margin: 0;
+	color: #71717a;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}

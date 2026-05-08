@@ -1,16 +1,17 @@
 
 .globalToggle {
-  background: #9c9a9a;
+  background: #4a4a4a;
 
   &:not(:global(.ant-switch-disabled)):hover {
-    background: #9c9a9a;
+    background: #4a4a4a;
   }
 
   &:global(.ant-switch-checked) {
-    background: #5c8dc5;
+    background: var(--gradient-brand);
   }
 
   &:global(.ant-switch-checked):not(:global(.ant-switch-disabled)):hover {
-    background: #5c8dc5;
+    background: var(--gradient-brand);
+    filter: brightness(1.05);
   }
 }

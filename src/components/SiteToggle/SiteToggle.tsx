@@ -56,7 +56,6 @@ const SiteToggle = () => {
   return (
     <Segmented
 		className={styles.siteToggle}
-		size="small"
       	options={["Dark", "Regular"]}
       	value={mode}
       	onChange={handleModeChange}

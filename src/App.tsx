@@ -1,8 +1,9 @@
-import CurrentDomain from './components/CurrentDomain/CurrentDomain';
-import SiteToggle from './components/SiteToggle/SiteToggle';
 import './styles/App.scss';
-import GlobalToggle from './components/GlobalToggle/GlobalToggle';
+import Header from './components/Header/Header';
+import GlobalMode from './components/GlobalMode/GlobalMode';
+import CurrentMode from './components/CurrentMode/CurrentMode';
 import SiteList from './components/SiteList/SiteList';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -10,16 +11,12 @@ function App() {
 
   return (
     <div className='app'>
-		<div className='container'>
-			<div className='extensionMode'>
-				<p className='extensionMode__title'>Dark Theme</p>
-				<GlobalToggle/>
-			</div>
-			<div className='siteSetting'>
-				<CurrentDomain />
-				<SiteToggle/>
-			</div>
+		<Header/>
+		<div className='content'>
+			<GlobalMode/>
+			<CurrentMode/>
 			<SiteList/>
+			<Footer/>
 		</div>
     </div>
   )
