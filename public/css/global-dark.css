@@ -1,24 +1,36 @@
 :root {
-	--dt-bg: #0f1012;
-	--dt-bg-elevated: #17181b;
-	--dt-bg-surface: #1e2024;
-	--dt-text: #e3e1dc;
-	--dt-text-muted: #a4a19a;
-	--dt-border: #2d2f34;
-	--dt-link: #c8b38e;
-	--dt-link-hover: #dcc7a1;
-	--dt-overlay: rgba(0, 0, 0, 0.62);
+	--dt-bg: #0d0f12;
+	--dt-bg-elevated: #14171e;
+	--dt-bg-surface: #1b1f28;
+	--dt-btn: #1e2330;
+	--dt-btn-hover: #252b3d;
+	--dt-text: #e1e3ea;
+	--dt-text-muted: #8a8f9e;
+	--dt-border: #252a35;
+	--dt-border-hover: #3a4055;
+	--dt-link: #818cf8;
+	--dt-link-hover: #a5b4fc;
+	--dt-overlay: rgba(0, 0, 0, 0.65);
+}
+
+/* Подсказываем браузеру рендерить нативные элементы в тёмном режиме */
+*,
+*::before,
+*::after {
+	color-scheme: dark !important;
 }
 
 html,
 body {
 	background-color: var(--dt-bg) !important;
 	color: var(--dt-text) !important;
-	color-scheme: dark !important;
 }
 
-body,
-div,
+/*
+ * Семантические структурные элементы — только цвет текста и рамки,
+ * без переопределения фона. div намеренно исключён: он слишком
+ * универсален и его сброс в transparent ломает модалки и попапы.
+ */
 main,
 section,
 article,
@@ -31,11 +43,11 @@ ol,
 li,
 fieldset,
 legend {
-	background-color: transparent !important;
 	color: var(--dt-text) !important;
 	border-color: var(--dt-border) !important;
 }
 
+/* Текстовые элементы */
 p,
 span,
 label,
@@ -43,10 +55,6 @@ small,
 strong,
 em,
 blockquote,
-code,
-pre,
-th,
-td,
 h1,
 h2,
 h3,
@@ -56,6 +64,28 @@ h6 {
 	color: var(--dt-text) !important;
 }
 
+/* Код и preformatted — нужен собственный фон */
+code,
+pre {
+	background-color: var(--dt-bg-elevated) !important;
+	color: var(--dt-text) !important;
+	border-color: var(--dt-border) !important;
+}
+
+/* Таблицы */
+table,
+tr,
+th,
+td {
+	color: var(--dt-text) !important;
+	border-color: var(--dt-border) !important;
+}
+
+hr {
+	border-color: var(--dt-border) !important;
+}
+
+/* Ссылки */
 a {
 	color: var(--dt-link) !important;
 }
@@ -65,6 +95,7 @@ a:focus-visible {
 	color: var(--dt-link-hover) !important;
 }
 
+/* Форм-элементы */
 input,
 textarea,
 select,
@@ -87,14 +118,7 @@ textarea::placeholder {
 	color: var(--dt-text-muted) !important;
 }
 
-hr,
-table,
-tr,
-td,
-th {
-	border-color: var(--dt-border) !important;
-}
-
+/* Медиа — без фона и фильтров */
 img,
 video,
 picture,
@@ -105,6 +129,7 @@ iframe {
 	filter: none !important;
 }
 
+/* Utility-классы с явно белым/светлым фоном */
 [class*="bg-white"],
 [class*="bg-light"],
 [class*="text-black"],
@@ -113,6 +138,26 @@ iframe {
 	color: var(--dt-text) !important;
 }
 
+/* Inline-стили с захардкоженным белым фоном */
+[style*="background:#fff"],
+[style*="background: #fff"],
+[style*="background:#FFF"],
+[style*="background: #FFF"],
+[style*="background:white"],
+[style*="background: white"],
+[style*="background-color:#fff"],
+[style*="background-color: #fff"],
+[style*="background-color:#FFF"],
+[style*="background-color: #FFF"],
+[style*="background-color:white"],
+[style*="background-color: white"],
+[style*="background-color: rgb(255, 255, 255)"],
+[style*="background-color:rgb(255,255,255)"] {
+	background-color: var(--dt-bg-elevated) !important;
+	color: var(--dt-text) !important;
+}
+
+/* Модалки, диалоги, попапы, тултипы, дропдауны, тосты */
 dialog,
 [role="dialog"],
 [aria-modal="true"],
@@ -122,20 +167,35 @@ dialog,
 [class*="Popup"],
 [class*="popover"],
 [class*="Popover"],
-[class*="dropdown-menu"],
-[class*="Dropdown-menu"] {
+[class*="dropdown"],
+[class*="Dropdown"],
+[class*="tooltip"],
+[class*="Tooltip"],
+[class*="toast"],
+[class*="Toast"],
+[class*="drawer"],
+[class*="Drawer"],
+[class*="sheet"],
+[class*="Sheet"],
+[class*="flyout"],
+[class*="Flyout"],
+[class*="menu"],
+[class*="Menu"] {
 	background-color: var(--dt-bg-surface) !important;
 	color: var(--dt-text) !important;
 	border: 1px solid var(--dt-border) !important;
 }
 
+/* Подложки и оверлеи */
 dialog::backdrop,
 [class*="backdrop"],
+[class*="Backdrop"],
 [class*="overlay"],
 [class*="Overlay"] {
 	background-color: var(--dt-overlay) !important;
 }
 
+/* Сайты с нативной поддержкой тёмной темы */
 html[data-theme="dark"],
 html[data-color-mode="dark"],
 html[class*="dark"] {
